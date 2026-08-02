@@ -1,0 +1,69 @@
+generated: '2026-08-02'
+method: probed
+source: live HTTPS probes on 2026-08-02
+summary: 'No /.well-known/ document is published for the Callisto Media brand on any
+  of its hosts. callistomedia.com does not answer on port 443 at all. www.callistopublishing.com
+  and www.sourcebooks.com run the same Sourcebooks Magento PWA storefront, which answers
+  200 with the single-page-application HTML shell (content-type text/html;charset=UTF-8,
+  <!DOCTYPE html>) for most unmatched paths — those 200s are catch-all responses, not
+  documents, and are recorded as such. The three paths the storefront does not catch
+  (/.well-known/ai-plugin.json, /.well-known/agent-card.json, /.well-known/agent.json)
+  return a genuine 404. No A2A agent card exists, so no a2a/ artifact was written.'
+hosts:
+- host: https://callistomedia.com
+  reachable: false
+  note: TCP connect to port 443 timed out; HTTP/80 returns 301 to https://www.callistopublishing.com
+  documents:
+  - {path: /.well-known/security.txt, status: null, result: connect-timeout}
+  - {path: /.well-known/openid-configuration, status: null, result: connect-timeout}
+  - {path: /.well-known/oauth-authorization-server, status: null, result: connect-timeout}
+  - {path: /.well-known/api-catalog, status: null, result: connect-timeout}
+  - {path: /.well-known/ai-plugin.json, status: null, result: connect-timeout}
+  - {path: /.well-known/agent-card.json, status: null, result: connect-timeout}
+  - {path: /.well-known/agent.json, status: null, result: connect-timeout}
+- host: https://www.callistopublishing.com
+  reachable: true
+  note: 301-redirects to https://www.sourcebooks.com/callisto/
+  documents:
+  - {path: /.well-known/security.txt, status: 200, result: spa-html-catchall}
+  - {path: /.well-known/openid-configuration, status: 200, result: spa-html-catchall}
+  - {path: /.well-known/oauth-authorization-server, status: 200, result: spa-html-catchall}
+  - {path: /.well-known/api-catalog, status: 200, result: spa-html-catchall}
+  - {path: /.well-known/ai-plugin.json, status: 404, result: not-found}
+  - {path: /.well-known/agent-card.json, status: 404, result: not-found}
+  - {path: /.well-known/agent.json, status: 404, result: not-found}
+- host: https://www.sourcebooks.com
+  reachable: true
+  note: Sourcebooks storefront; hosts the Callisto brand page at /callisto/
+  documents:
+  - {path: /.well-known/security.txt, status: 200, result: spa-html-catchall}
+  - {path: /.well-known/openid-configuration, status: 200, result: spa-html-catchall}
+  - {path: /.well-known/oauth-authorization-server, status: 200, result: spa-html-catchall}
+  - {path: /.well-known/api-catalog, status: 200, result: spa-html-catchall}
+  - {path: /.well-known/ai-plugin.json, status: 404, result: not-found}
+  - {path: /.well-known/agent-card.json, status: 404, result: not-found}
+  - {path: /.well-known/agent.json, status: 404, result: not-found}
+  - {path: /robots.txt, status: 200, result: served, content_type: text/plain}
+contract_discovery:
+  openapi: none
+  probed:
+  - {url: 'https://www.callistopublishing.com/openapi.json', status: 404}
+  - {url: 'https://www.callistopublishing.com/openapi.yaml', status: 200, result: spa-html-catchall}
+  - {url: 'https://www.callistopublishing.com/swagger.json', status: 404}
+  - {url: 'https://www.callistopublishing.com/api-docs', status: 200, result: spa-html-catchall}
+  - {url: 'https://www.callistopublishing.com/llms.txt', status: 200, result: spa-html-catchall}
+  - {url: 'https://www.callistopublishing.com/graphql', status: 200, result: spa-html-catchall}
+  - {url: 'https://www.sourcebooks.com/openapi.json', status: 404}
+  - {url: 'https://www.sourcebooks.com/swagger.json', status: 404}
+  - {url: 'https://www.sourcebooks.com/api-docs', status: 200, result: spa-html-catchall}
+  - {url: 'https://www.sourcebooks.com/llms.txt', status: 200, result: spa-html-catchall}
+  - {url: 'https://www.sourcebooks.com/graphql', status: 403, result: forbidden}
+  graphql: 'no introspectable endpoint for Callisto; the Sourcebooks Magento storefront
+    exposes /graphql but returns 403 to anonymous requests, and that surface belongs
+    to Sourcebooks, not to the Callisto Media entity'
+  mcp: none
+  a2a: 'none — /.well-known/agent-card.json and /.well-known/agent.json both 404 on
+    every host'
+  github_org: 'none — github.com/callistomedia, /callisto-media and /rockridgepress
+    all 404 on the GitHub API'
+  packages: 'none — no first-party client library found on npm or PyPI'

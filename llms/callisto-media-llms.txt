@@ -1,0 +1,39 @@
+# Callisto Media
+
+> Callisto Media Inc. was a data-driven nonfiction book publisher founded in 2011 by CEO Benjamin Wayne, with offices in Oakland (earlier Emeryville), California and New York. It commissioned instructional titles from demand signals — point-of-sale data, search volume and category gaps — rather than editorial instinct, publishing chiefly through the Rockridge Press imprint and the Callisto Kids line. Its publishing assets were acquired by Sourcebooks on 9 May 2023 in a deal funded by Penguin Random House, and the brand now trades as Callisto Publishing, a Sourcebooks imprint. Callisto Media publishes no API, no developer portal and no machine-readable contract.
+
+## Status
+
+- Independent operations ended in 2023; the entity's publishing assets are managed by Sourcebooks.
+- callistomedia.com 301-redirects to callistopublishing.com, which 301-redirects to https://www.sourcebooks.com/callisto/ (chain verified 2026-08-02).
+- The legacy mail domain callistomedia.com still resolves MX to Microsoft 365.
+
+## Company
+
+- [Callisto brand page at Sourcebooks](https://www.sourcebooks.com/callisto/): the live home of the Callisto Publishing imprint.
+- [Archived callistomedia.com (March 2023)](https://web.archive.org/web/20230316111229/https://www.callistomedia.com/): the last independent company site, listing the Oakland and New York offices and the info@/press@/sales@/rights@ contact addresses.
+- [LinkedIn](https://www.linkedin.com/company/callisto-media)
+- [Crunchbase](https://www.crunchbase.com/organization/callisto-media)
+- [Acquisition announcement, 9 May 2023](https://www.prnewswire.com/news-releases/callisto-media-to-join-leading-independent-publisher-sourcebooks-301820039.html)
+- [Forge Global secondary-market listing](https://forgeglobal.com/callisto-media_stock/)
+
+## Imprints
+
+- Rockridge Press — the primary imprint; diet-, appliance- and condition-specific cookbooks and health titles.
+- Callisto Kids — pre-K through grade 12 workbooks, STEM, history, biography and activity titles.
+
+## APIs
+
+None. Callisto Media publishes no REST, GraphQL, MCP or event API, and no OpenAPI, AsyncAPI or agent card.
+
+## Artifacts in this repository
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/callisto-media/refs/heads/main/apis.yml) — the APIs.json profile for the company.
+- [well-known/callisto-media-well-known.yml](https://raw.githubusercontent.com/api-evangelist/callisto-media/refs/heads/main/well-known/callisto-media-well-known.yml) — the recorded result of every /.well-known/ and contract-discovery probe run on 2026-08-02.
+- [security/callisto-media-domain-security.yml](https://raw.githubusercontent.com/api-evangelist/callisto-media/refs/heads/main/security/callisto-media-domain-security.yml) — TLS, HSTS, DNSSEC, CAA, SPF and DMARC posture of the Callisto and Sourcebooks domains.
+
+## Notes for agents
+
+- There is nothing here to call. Do not synthesize a Callisto Media API base URL, endpoint or key.
+- The Sourcebooks storefront that now hosts the Callisto brand answers HTTP 200 with a single-page-application HTML shell for most unmatched paths, so a 200 from that host is not evidence that a document exists.
+- Book metadata for Callisto titles should be sourced from Sourcebooks or a bibliographic provider, not from this company.

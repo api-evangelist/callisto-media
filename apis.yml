@@ -1,17 +1,59 @@
 aid: callisto-media
 name: Callisto Media
-description: 'Callisto Media is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Callisto Media Inc. was a data-driven nonfiction book publisher founded
+  in 2011 by chief executive Benjamin Wayne, operating from 1955 Broadway in Oakland,
+  California (earlier Emeryville) and 220 West 19th Street in New York. It built a
+  publishing model around demand signals rather than editorial instinct — mining point-of-sale
+  data, search volume and category gaps to decide which instructional titles to commission,
+  then matching each topic to a subject-matter author. Its primary imprint was Rockridge
+  Press, best known for diet-, appliance- and condition-specific cookbooks and health
+  titles, alongside the Callisto Kids line of pre-K through grade 12 workbooks, STEM,
+  history and biography titles; the company said it had reached more than 50 million
+  customers and ranked among the top fifteen US publishers by unit sales. It raised
+  venture funding from 137 Ventures in 2017, then contracted sharply — cutting 35 percent
+  of staff in July 2022 and a further 200 roles that October — and on 9 May 2023 its
+  publishing assets were acquired by the independent publisher Sourcebooks in a deal
+  funded by Penguin Random House, with Simon & Schuster Distribution Services continuing
+  to distribute the titles. The brand now trades as Callisto Publishing, a Sourcebooks
+  imprint: callistomedia.com 301-redirects to callistopublishing.com, which 301-redirects
+  again to sourcebooks.com/callisto (chain verified 2026-08-02). Callisto Media is
+  a consumer publishing business, not a software vendor, and has no public API surface.
+  Probes on 2026-08-02 against callistomedia.com, www.callistopublishing.com and www.sourcebooks.com
+  returned no machine-readable contract: /openapi.json, /swagger.json and /.well-known/ai-plugin.json
+  all 404, /.well-known/agent-card.json and /.well-known/agent.json both 404 (no A2A
+  agent card), and every other probed path answered with the Sourcebooks single-page
+  Magento storefront shell rather than a document. There is no developer portal, no
+  GitHub organization (callistomedia, callisto-media and rockridgepress all 404 on
+  the GitHub API), no published SDK on npm or PyPI, and no llms.txt.'
+image: https://web.archive.org/web/20230316111229im_/https://www.callistomedia.com/content/uploads/2018/12/logo-2.png
 url: https://raw.githubusercontent.com/api-evangelist/callisto-media/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
+x-secondary-market-listing: https://forgeglobal.com/callisto-media_stock/
+x-archived-website: https://web.archive.org/web/20230316111229/https://www.callistomedia.com/
+x-successor: Callisto Publishing, an imprint of Sourcebooks (assets acquired 2023-05-09)
 x-tier: stub
-x-tier-reason: harvest
+x-tier-reason: no-public-api-surface
+x-enrichment:
+  date: '2026-08-02'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
 specificationVersion: '0.20'
 created: '2026-08-02'
 modified: '2026-08-02'
 tags:
 - Company
+- Publishing
+- Book Publishing
+- Educational Publishing
+- Children's Books
+- Nonfiction
+- Media
+- Consumer Products
+- Data-Driven Publishing
+- Acquired
+- United States
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +61,19 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/callisto-media-domain-security.yml
+- type: WellKnown
+  url: well-known/callisto-media-well-known.yml
+- type: LLMsTxt
+  url: llms/callisto-media-llms.txt
 - type: Website
+  url: https://www.sourcebooks.com/callisto/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/callisto-media
+- type: Crunchbase
+  url: https://www.crunchbase.com/organization/callisto-media
+- type: Press
+  url: https://www.prnewswire.com/news-releases/callisto-media-to-join-leading-independent-publisher-sourcebooks-301820039.html
+- type: SecondaryMarket
   url: https://forgeglobal.com/callisto-media_stock/
