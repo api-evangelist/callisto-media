@@ -25,6 +25,17 @@ description: 'Callisto Media Inc. was a data-driven nonfiction book publisher fo
   Magento storefront shell rather than a document. There is no developer portal, no
   GitHub organization (callistomedia, callisto-media and rockridgepress all 404 on
   the GitHub API), no published SDK on npm or PyPI, and no llms.txt.'
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://web.archive.org/web/20230316111229im_/https://www.callistomedia.com/content/uploads/2018/12/logo-2.png
 url: https://raw.githubusercontent.com/api-evangelist/callisto-media/refs/heads/main/apis.yml
 x-type: company
