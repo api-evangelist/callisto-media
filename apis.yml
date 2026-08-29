@@ -38,6 +38,9 @@ deliveryModel:
   method: derived
 image: https://web.archive.org/web/20230316111229im_/https://www.callistomedia.com/content/uploads/2018/12/logo-2.png
 url: https://raw.githubusercontent.com/api-evangelist/callisto-media/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "Callisto Media is a consumer publishing business, not a software vendor, and has no public API surface."
 x-type: company
 x-source: harvest:secondary-market
 x-secondary-market-listing: https://forgeglobal.com/callisto-media_stock/
