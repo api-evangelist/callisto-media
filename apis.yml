@@ -67,7 +67,7 @@ x-enrichment:
   pass: local-v1
 specificationVersion: '0.23'
 created: '2026-08-02'
-modified: '2026-08-02'
+modified: '2026-10-06'
 tags:
 - Company
 - Publishing
@@ -87,6 +87,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- url: https://www.sourcebooks.com/blog/
+  type: Blog
 - type: DomainSecurity
   url: security/callisto-media-domain-security.yml
 - type: WellKnown
