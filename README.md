@@ -64,36 +64,80 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Callisto Media Inc. was a data-driven nonfiction book publisher founded in 2011 by CEO Benjamin Wayne,
-with offices in Oakland (earlier Emeryville), California and New York. It commissioned instructional
-titles from demand signals — point-of-sale data, search volume and category gaps — rather than editorial
-instinct, publishing chiefly through the **Rockridge Press** imprint and the **Callisto Kids** line.
-Its publishing assets were acquired by **Sourcebooks** on 9 May 2023 in a deal funded by Penguin Random
-House, and the brand now trades as **Callisto Publishing**, a Sourcebooks imprint.
+Callisto Media Inc. was a data-driven nonfiction book publisher founded in 2011 by chief executive Benjamin Wayne, operating from 1955 Broadway in Oakland, California (earlier Emeryville) and 220 West 19th Street in New York. It built a publishing model around demand signals rather than editorial instinct — mining point-of-sale data, search volume and category gaps to decide which instructional titles to commission, then matching each topic to a subject-matter author. Its primary imprint was Rockridge Press, best known for diet-, appliance- and condition-specific cookbooks and health titles, alongside the Callisto Kids line of pre-K through grade 12 workbooks, STEM, history and biography titles; the company said it had reached more than 50 million customers and ranked among the top fifteen US publishers by unit sales. It raised venture funding from 137 Ventures in 2017, then contracted sharply — cutting 35 percent of staff in July 2022 and a further 200 roles that October — and on 9 May 2023 its publishing assets were acquired by the independent publisher Sourcebooks in a deal funded by Penguin Random House, with Simon & Schuster Distribution Services continuing to distribute the titles. The brand now trades as Callisto Publishing, a Sourcebooks imprint: callistomedia.com 301-redirects to callistopublishing.com, which 301-redirects again to sourcebooks.com/callisto (chain verified 2026-08-02). Callisto Media is a consumer publishing business, not a software vendor, and has no public API surface. Probes on 2026-08-02 against callistomedia.com, www.callistopublishing.com and www.sourcebooks.com returned no machine-readable contract: /openapi.json, /swagger.json and /.well-known/ai-plugin.json all 404, /.well-known/agent-card.json and /.well-known/agent.json both 404 (no A2A agent card), and every other probed path answered with the Sourcebooks single-page Magento storefront shell rather than a document. There is no developer portal, no GitHub organization (callistomedia, callisto-media and rockridgepress all 404 on the GitHub API), no published SDK on npm or PyPI, and no llms.txt.
 
-## API surface
+**Areas:** Company · Publishing · Book Publishing · Educational Publishing · Children's Books · Nonfiction · Media · Consumer Products · Data-Driven Publishing · Acquired · United States
 
-**None.** Enrichment probes on 2026-08-02 found no machine-readable contract of any kind:
+## Callisto Media on APIs.io
 
-- `callistomedia.com` does not answer on port 443; HTTP/80 returns `301` to `callistopublishing.com`,
-  which `301`s again to `https://www.sourcebooks.com/callisto/`.
-- `/openapi.json`, `/swagger.json` and `/.well-known/ai-plugin.json` → `404` on every host.
-- `/.well-known/agent-card.json` and `/.well-known/agent.json` → `404` on every host (no A2A agent card).
-- Other probed paths return `200` with the Sourcebooks Magento single-page-application HTML shell —
-  a catch-all response, not a document.
-- No developer portal, no GitHub organization, no SDK on npm or PyPI, no `llms.txt`.
+Everything profiled for Callisto Media is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/callisto-media/](https://apis.io/providers/callisto-media/)** — or go straight to one of the APIs or properties below.
 
-## Artifacts
+### Published properties
 
-| Path | Type | Method |
-|---|---|---|
-| `well-known/callisto-media-well-known.yml` | WellKnown | probed |
-| `security/callisto-media-domain-security.yml` | DomainSecurity | probed |
-| `llms/callisto-media-llms.txt` | LLMsTxt | generated |
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Links
+#### Security (1)
 
-- Callisto brand page: https://www.sourcebooks.com/callisto/
-- Archived company site (March 2023): https://web.archive.org/web/20230316111229/https://www.callistomedia.com/
-- Acquisition announcement: https://www.prnewswire.com/news-releases/callisto-media-to-join-leading-independent-publisher-sourcebooks-301820039.html
-- Secondary-market listing: https://forgeglobal.com/callisto-media_stock/
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Callisto Media Domain Security](https://apis.io/security/callisto-media/callisto-media-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.sourcebooks.com/callisto/)
+- [Blog](https://www.sourcebooks.com/blog/)
+
+## API Evangelist rating
+
+**Kin Score 4.7** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/callisto-media/](https://apis.io/providers/callisto-media/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Callisto Media: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/callisto-media/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
